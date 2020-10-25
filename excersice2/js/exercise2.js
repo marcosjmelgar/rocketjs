@@ -42,3 +42,23 @@ alert (x2);
 
 /*Crear una variable de tipo string con al menos 10 caracteres y algún espacio en blanco. Encontrar la posición del \
 primer espacio en blanco y guardarla en una variable (utilizar indexOf).*/
+
+var x1 = "cosechadora segadora";
+var x2 = x1.substring(1,0).toUpperCase();
+var x3 = x1.substring(1,12).toLowerCase();
+var x4 = x2 + x3;
+var x5 = x1.lastIndexOf("s");
+var x6 = x1.substring(x5,13).toUpperCase();
+var x7 = x5+1;
+var x8 = x1.substring(x7,20).toLowerCase();
+var x9 = x6 + x8;
+var x10 = x4 + x9;
+console.log(x10);
+alert (x10);
+
+/*Crear una variable de tipo string con al menos 2 palabras largas (10 caracteres y algún espacio 
+    entre medio). Utilizar los métodos de los ejercicios anteriores para generar un nuevo 
+    string que tenga la primera letra de ambas palabras en mayúscula y las demás letras en 
+    minúscula (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).*/
+    
+
