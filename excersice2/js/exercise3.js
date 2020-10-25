@@ -18,3 +18,7 @@ console.log (meses[4],meses[10]);
  console.log (meses);
 
  /*Agregar un elemento al principio y al final del array (utilizar unshift y push).*/
+
+ var mesesn = meses.shift();
+ var mesesu = meses.pop();
+ console.log(meses);
