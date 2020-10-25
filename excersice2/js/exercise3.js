@@ -22,3 +22,10 @@ console.log (meses[4],meses[10]);
  var mesesn = meses.shift();
  var mesesu = meses.pop();
  console.log(meses);
+
+ /*Quitar un elemento del principio y del final del array (utilizar shift y pop).*/
+
+ var mesesr = meses.reverse();
+ console.log (meses);
+
+ /*Invertir el orden del array (utilizar reverse)*/
