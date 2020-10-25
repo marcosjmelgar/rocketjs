@@ -12,3 +12,9 @@ console.log (meses[4],meses[10]);
  console.log (mesesord);
  
  /*Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).*/
+
+ var mesesm = meses.push("ultimo");
+ var mesesp = meses.unshift("primero");
+ console.log (meses);
+
+ /*Agregar un elemento al principio y al final del array (utilizar unshift y push).*/
