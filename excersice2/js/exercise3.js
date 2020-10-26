@@ -29,3 +29,11 @@ console.log (meses[4],meses[10]);
  console.log (meses);
 
  /*Invertir el orden del array (utilizar reverse)*/
+
+ var mesesj = meses.join("-");
+ console.log(mesesj);
+
+ /*Unir todos los elementos del array en un único 
+ string donde cada mes este separado por un guión - (utilizar join).*/
+
+ 
