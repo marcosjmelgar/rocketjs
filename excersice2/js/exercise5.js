@@ -10,7 +10,7 @@ un bucle for de JavaScript para mostrar una alerta utilizando cada una de las pa
 
 for (var index=0; index<dias.length; index++) {
     dias[index] = dias[index].charAt(0).toUpperCase() + dias[index].substring(1);
-    console.log(dias);
+    alert(dias[index]);
 }
 
 /*Al array anterior convertir la primera letra de 
