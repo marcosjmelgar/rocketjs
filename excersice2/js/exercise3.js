@@ -36,4 +36,7 @@ console.log (meses[4],meses[10]);
  /*Unir todos los elementos del array en un único 
  string donde cada mes este separado por un guión - (utilizar join).*/
 
- 
+ var meses = ["Enero","Febrero", "Marzo", "Abril", "Mayo","Junio",
+ "Julio","Agosto","Septiembre", "Octubre","Noviembre","Diciembre"];
+ var mesess = meses.slice(4,11);
+ console.log(mesess);
