@@ -38,7 +38,7 @@ console.log(x2);
 /*Crear una variable de tipo string con al menos 10 caracteres y algún espacio en blanco. Encontrar la posición del \
 primer espacio en blanco y guardarla en una variable (utilizar indexOf).*/
 
-var x1 = "cosechadora segadora";
+var x1 = "harvester senior";
 var x2 = x1.substring(1,0).toUpperCase();
 var x3 = x1.substring(1,12).toLowerCase();
 var x4 = x2 + x3;
