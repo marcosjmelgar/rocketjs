@@ -12,11 +12,11 @@ if (x1>0.5) {
 si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje
 “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5*/
 
-var Age = Math.round(Math.random()*100);
+var Age = Math.round(Math.random() * 100);
 console.log (Age);
 if (Age < 2) {
     alert ("Bebe")
-} else if (Age >= 2 && Age <=12 ) {
+} else if (Age >= 2 && Age <= 12 ) {
     alert ("Nino")
 } else if (Age >= 13 && Age <= 19) {
     alert ("Adolescente")
