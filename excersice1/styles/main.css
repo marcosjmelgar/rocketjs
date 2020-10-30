@@ -70,8 +70,8 @@
 .box1 a{
         text-decoration: none;
         color: #000000;
- }
- 
+}
+
 .box1 a:hover{
         font-weight: bolder;
         color: #ff0000;
@@ -207,7 +207,7 @@
         display: flex;
         flex-direction: row;
     }
-        
+
     .asided {
         display: flex;
         flex-direction: column;
@@ -217,7 +217,7 @@
         border-top: none;
         width: 30%;
     }
-        
+
     aside{
         border-left: 1px dashed;
         display: flex;
@@ -225,18 +225,18 @@
         align-items: center;
         justify-content: space-around;
         }
-        
+
     .container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
     }
-        
+
     .boxpri{
         padding-right: 70px;
     }
-        
+
     .container3{
         width: 70%;
     }
