@@ -1,12 +1,12 @@
-.brandtitle nav ul{
+.brandtitle nav ul {
     display: none;
 }
 
-.brandtitle nav label{
+.brandtitle nav label {
     display: inline-block;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     background-color: #f1f1f5;
@@ -19,7 +19,7 @@ header{
     min-width: 320px;
 }
 
-.brandtitle{
+.brandtitle {
     width: 100%;
     font-size: 30px;
     font-family: helvetica, arial;
@@ -28,20 +28,20 @@ header{
     justify-content: space-between;
 }
 
-.brandtitle h1{
+.brandtitle h1 {
     display: flex;
     margin-bottom: 10px;
     margin-left: 10px;
 }
 
-header a{
+header a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
     color: #424244;
 }
 
-header a:hover{
+header a:hover {
     font-weight: bolder;
     color: #424244;
     color: #704242;
@@ -49,15 +49,15 @@ header a:hover{
 
 @media (min-width:900px) {
 
-    .brandtitle nav label{
+    .brandtitle nav label {
         display: none;
     }
 
-    .brandtitle nav ul{
+    .brandtitle nav ul {
         display: flex;
     }
 
-    .nav li{
+    .nav li {
         padding: 0px 10px;
     }
 

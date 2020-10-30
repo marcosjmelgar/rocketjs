@@ -18,7 +18,7 @@ footer {
     width: 50%;
 }
 
-.listf ul{
+.listf ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,21 +44,21 @@ footer {
     width: 50%;
 }
 
-.footerd ul{
+.footerd ul {
     color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     font-size: 17px;
 }
 
-footer a:hover{
+footer a:hover {
     font-weight: bolder;
     color:#ff0000;
 }
