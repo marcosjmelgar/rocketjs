@@ -14,8 +14,8 @@
 window.onload = function(){
     var email = document.getElementById("email");
     var password = document.getElementById("password");
-    var rpassword = document.getElementsByClassName("rpassword");
-    var age = document.getElementsByClassName("age");
+    var rpassword = document.getElementById("rpassword");
+    var age = document.getElementById("age");
     var telephone = document.getElementsByClassName("telephone");
     var adress = document.getElementsByClassName("adress");
     var city = document.getElementsByClassName("city");
@@ -27,7 +27,7 @@ window.onload = function(){
 
     function validateName () {
         if ( fullname.value.length <= 6  || !fullname.value.includes(" ")) {
-            console.log("Nombre menor a 6 letras o sin espacio");
+            console.log("Name lower than 6 letters or withouth space");
         }
     }
 
@@ -43,7 +43,31 @@ window.onload = function(){
 
     password.onblur = validatePassword;
 
-    Function validatePassword () {
-        if ()
+    function validatePassword () {
+            if (password.value.length < 8) {
+                console.log("too_short");
+            } else if (password.value.search(/\d/) == -1) {
+                console.log("no_num");
+            } else if (password.value.search(/[a-zA-Z]/) == -1) {
+                console.log("no_letter");
+            } else if (console.log("ok"));
+    }
+
+    rpassword.onblur = validateRpassword;
+
+    function validateRpassword () {
+        if (rpassword.value !== password.value) {
+            console.log("not the same");
+        } else if (console.log ("are the same"));
+    }
+
+    age.onblur = validateAge;
+// falta validar que sea entero
+    function validateAge () {
+        if (age.value.search (/\d/) == -1) {
+            console.log ("type a number");
+        } else if ( age.value < 18) {
+            console.log("age must be older than 18");
+        } else if (console.log ("age ok"));
     }
 }
