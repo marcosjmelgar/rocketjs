@@ -30,48 +30,60 @@
     </header>
     <h2> Subscription Form </h2>
     <div class="formbox">
-        <form>
-            <div>
+        <form class="form">
+            <div class="divform">
                 <label> Full Name </label>
                 <input id = "fullname" type="text">
+                <div id = "fullnameoutput"> <p> Name lower than 6 letters or without space </p> </div>
             </div>
-            <div>
+            <div class="divform">
                 <label> Email </label>
                 <input id = "email">
+                <div id = "emailoutput"> <p> Invalid email </p> </div>
             </div>
-            <div>
+            <div class="divform">
                 <label> Password </label>
-                <input id = "password">
+                <input id = "password" type="password">
+                <div id = "passwordoutput"> <p> Password must have 8 characters with letters and numbers </p> </div>
             </div>
-            <div>
+            <div class="divform">
                 <label> Repeat Password </label>
-                <input id = "rpassword">
+                <input id = "rpassword" type="password">
+                <div id = "rpasswordoutput"></div>
             </div>
-            <div>
+            <div class="divform">
                 <label> Age </label>
-                <input id = "age">
+                <input id = "age" type="number">
+                <div id = "ageoutput"></div>
             </div>
-            <div>
+            <div class="divform">
                 <label> Telephone Number </label>
-                <input class = "telephone">
+                <input id = "telephone">
+                <div id = "telephoneoutput"></div>
             </div>
-            <div>
+            <div class="divform">
                 <label> Adress </label>
-                <input class = "adress">
+                <input id = "adress">
+                <div id = "adressoutput"></div>
             </div>
-            <div>
+            <div class="divform">
                 <label> City </label>
-                <input class = "city">
+                <input id = "city">
+                <div id = "cityoutput"></div>
             </div>
-            <div>
+            <div class="divform">
                 <label> Postal Code </label>
-                <input class = "postal">
+                <input id = "postal" type = "number">
+                <div id = "postaloutput"></div>
             </div>
-            <div>
+            <div class="divform">
                 <label> Identification Number </label>
-                <input class = "identification">
+                <input id = "identification" type = "number">
+                <div id = "identificationoutput"></div>
             </div>
-            <button> Send </button>
+            <div class="divform">
+                <button> Send </button>
+            </div>
         </form>
     </div>
     <footer>
