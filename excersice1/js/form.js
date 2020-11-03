@@ -22,6 +22,7 @@ window.onload = function(){
     var city = document.getElementById("city");
     var postal = document.getElementById("postal");
     var identification = document.getElementById("identification");
+    var button = document.getElementById("button");
 
     fullname.onblur = validateName;
     fullname.onfocus = hideDiv;
@@ -165,5 +166,17 @@ window.onload = function(){
         document.getElementById ("cityp").style.visibility = "hidden";
         document.getElementById ("postalp").style.visibility = "hidden";
         document.getElementById ("identificationp").style.visibility = "hidden";
+    }
+
+    button.addEventListener ("click", clickEvent)
+
+    function clickEvent (e) {
+        e.preventDefault ();
+        
+        alert("Check data: " + " Full name: " + fullname.value + " Email: "
+        + email.value + " Password: " + password.value + " Age: " + age.value + " Telephone: " + telephone.value +
+        " Adress: " + adress.value + " City: " + city.value + " Postal Code: " + postal.value +
+        " Identification Number: " + identification.value);
+        return false;
     }
 }

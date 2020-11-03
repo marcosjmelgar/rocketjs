@@ -16,6 +16,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 95%;
+    border: 1px solid;
 }
 
 h2 {
@@ -43,10 +44,18 @@ h2 {
     margin-bottom: 5px;
 }
 
-.divform button {
-    display:flex;
+.divbutton {
+    width: 200px;
+    align-items: center;
+}
+
+.divbutton button:hover {
+    font-weight: bold;
+}
+
+.divbutton button {
+    background-color: #759fad;
     width: 100px;
-    text-align: center;
 }
 
 .divform div {
