@@ -44,95 +44,126 @@ window.onload = function(){
     }
 
     password.onblur = validatePassword;
+    password.onfocus = hideDiv;
 
     function validatePassword () {
             if (password.value.length < 8) {
-                console.log("too_short");
+                document.getElementById ("passwordp").innerText = "Password need to be at least 8 characters long";
+                document.getElementById ("passwordp").style.visibility = "visible";
             } else if (password.value.search(/\d/) == -1) {
                 console.log("no_num");
+                document.getElementById("passwordp").innerText = "Password need to have at least 1 number";
+                document.getElementById ("passwordp").style.visibility = "visible";
             } else if (password.value.search(/[a-zA-Z]/) == -1) {
-                console.log("no_letter");
-            } else if (console.log("ok"));
+                document.getElementById ("passwordp").innerText = "Password need to have at least 1 letter";
+                document.getElementById ("passwordp").style.visibility = "visible";
+            }
     }
 
     rpassword.onblur = validateRpassword;
+    rpassword.onfocus = hideDiv;
 
     function validateRpassword () {
         if (rpassword.value !== password.value) {
-            console.log("not the same");
-        } else if (console.log ("are the same"));
+            document.getElementById ("rpasswordp").innerText = "Not the same as password";
+            document.getElementById ("rpasswordp").style.visibility = "visible";
+        }
     }
 
     age.onblur = validateAge;
+    age.onfocus = hideDiv;
 
     function validateAge () {
         if (age.value.search (/\d/) == -1) {
-            console.log ("type a number");
+            document.getElementById ("agep").innerText = "Not a number";
+            document.getElementById ("agep").style.visibility = "visible";
         } else if ( age.value < 18 || age.value % 1 !== 0) {
-            console.log("age must be older than 18 and to be an integer");
-        } else ("age ok");
+            document.getElementById ("agep").innerText = "Age must be at least 18 and to be an integer";
+            document.getElementById ("agep").style.visibility = "visible";
+        }
     }
 
     telephone.onblur = validateTelephone;
+    telephone.onfocus = hideDiv;
 
     function validateTelephone () {
         if (telephone.value.search (/\d/) == -1 ) {
-            console.log ("type a number");
+            document.getElementById ("telephonep").innerText = "Not a number";
+            document.getElementById ("telephonep").style.visibility = "visible";
         } else if (telephone.value.search (/\s/) !== -1) {
-            console.log ("error blank");
+            document.getElementById ("telephonep").innerText = "There is a space";
+            document.getElementById ("telephonep").style.visibility = "visible";
         }   else if (telephone.value.search (/\(/) !== -1 || telephone.value.search (/\)/) !== -1 ) {
-            console.log ("parentesis error");
+            document.getElementById ("telephonep").innerText = "There are parenthesis";
+            document.getElementById ("telephonep").style.visibility = "visible";
         }   else if (telephone.value.search (/\-/) !== -1) {
-            console.log ("guion error");
+            document.getElementById ("telephonep").innerText = "There are dashs";
+            document.getElementById ("telephonep").style.visibility = "visible";
         } else if (telephone.value.length < 7) {
-            console.log ("telephone at least 7 numbers");
+            document.getElementById ("telephonep").innerText = "Telephone number must have at least 7 numbers";
+            document.getElementById ("telephonep").style.visibility = "visible";
         }
     }
 
     adress.onblur = validateAdress;
+    adress.onfocus = hideDiv;
 
     function validateAdress () {
         if ( adress.value.length < 5) {
-            console.log ("adress less than 5 chracters");
+            document.getElementById ("adressp").innerText = "Adress must have at least 5 characters";
+            document.getElementById ("adressp").style.visibility = "visible";
         }   else if (adress.value.search (/\w\s\d/) == -1) {
-        console.log("ok")
+            document.getElementById ("adressp").innerText = "Adress must have characters, numbers and a space between";
+            document.getElementById ("adressp").style.visibility = "visible";
         }
     }
 
     city.onblur = validateCity;
+    city.onfocus = hideDiv;
 
     function validateCity () {
         if (city.value.length < 3) {
-            console.log("city less than 3 characters")
-        } else {
-            console.log ("ok")
+            document.getElementById ("cityp").innerText = "City must have at least 3 characters";
+            document.getElementById ("cityp").style.visibility = "visible";
         }
     }
 
     postal.onblur = validatePostal;
+    postal.onfocus = hideDiv;
 
     function validatePostal () {
         if ( postal.value.length < 3) {
-            console.log ("postal code less than 3 characters")
-        } else {
-            console.log ("ok")
+            document.getElementById ("postalp").innerText = "Postal must have at least 3 numbers";
+            document.getElementById ("postalp").style.visibility = "visible";
         }
     }
 
     identification.onblur = validateIdentification;
+    identification.onfocus = hideDiv;
 
     function validateIdentification () {
         if (identification.value.search (/\d/) == -1) {
-            console.log ("type a number");
+            document.getElementById ("identificationp").innerText = "Identification must be a number";
+            document.getElementById ("identificationp").style.visibility = "visible";
         } else if (identification.value.length > 8 || identification.value.length < 7) {
-            console.log ("number between 7 and 8");
+            document.getElementById ("identificationp").innerText = "Identification must have between 7 and 8 numbers";
+            document.getElementById ("identificationp").style.visibility = "visible";
         }   else if (identification.value % 1 !== 0) {
-            console.log ("identification must be an integer");
+            document.getElementById ("identificationp").innerText = "Identification must be an integer";
+            document.getElementById ("identificationp").style.visibility = "visible";
         }
     }
 
     function hideDiv () {
-        document.getElementById("fullnameoutput").style.visibility = "hidden";
-        document.getElementById("emailoutput").style.visibility = "hidden";
+        document.getElementById ("fullnameoutput").style.visibility = "hidden";
+        document.getElementById( "emailoutput").style.visibility = "hidden";
+        document.getElementById ("passwordp").style.visibility = "hidden";
+        document.getElementById ("rpasswordp").style.visibility = "hidden";
+        document.getElementById ("agep").style.visibility = "hidden";
+        document.getElementById ("telephonep").style.visibility = "hidden";
+        document.getElementById ("adressp").style.visibility = "hidden";
+        document.getElementById ("cityp").style.visibility = "hidden";
+        document.getElementById ("postalp").style.visibility = "hidden";
+        document.getElementById ("identificationp").style.visibility = "hidden";
     }
 }
