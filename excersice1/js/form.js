@@ -38,10 +38,13 @@ window.onload = function(){
     email.onfocus = hideDiv;
 
     function validateEmail () {
-        if (/^\w+([\.-]?\w+)*@(?:|hotmail|outlook|yahoo|live|gmail)\.(?:|com|es)+$/.test(email.value)) {
-        } else {
-                document.getElementById ("emailoutput").style.visiblity = "visible";
-            }
+        if (/^\w+([\.-]?\w+)*@(?:|hotmail|outlook|yahoo|live|gmail)\.(?:|com|es)+$/.test(email.value) == true ) {
+            console.log("ok")
+        }   else {document.getElementById ("emailp").innerText = "Invalid Email";
+                document.getElementById ("emailp").style.visibility = "visible";
+                document.getElementById ("emailp").style.color = "red";
+                document.getElementById ("emailp").style.fontWeight = "bold";
+                }
     }
 
     password.onblur = validatePassword;
@@ -51,13 +54,19 @@ window.onload = function(){
             if (password.value.length < 8) {
                 document.getElementById ("passwordp").innerText = "Password need to be at least 8 characters long";
                 document.getElementById ("passwordp").style.visibility = "visible";
+                document.getElementById ("passwordp").style.color = "red";
+                document.getElementById ("passwordp").style.fontWeight = "bold";
             } else if (password.value.search(/\d/) == -1) {
                 console.log("no_num");
                 document.getElementById("passwordp").innerText = "Password need to have at least 1 number";
                 document.getElementById ("passwordp").style.visibility = "visible";
+                document.getElementById ("passwordp").style.color = "red";
+                document.getElementById ("passwordp").style.fontWeight = "bold";
             } else if (password.value.search(/[a-zA-Z]/) == -1) {
                 document.getElementById ("passwordp").innerText = "Password need to have at least 1 letter";
                 document.getElementById ("passwordp").style.visibility = "visible";
+                document.getElementById ("passwordp").style.color = "red";
+                document.getElementById ("epasswordp").style.fontWeight = "bold";
             }
     }
 
@@ -68,6 +77,8 @@ window.onload = function(){
         if (rpassword.value !== password.value) {
             document.getElementById ("rpasswordp").innerText = "Not the same as password";
             document.getElementById ("rpasswordp").style.visibility = "visible";
+            document.getElementById ("rpasswordp").style.color = "red";
+            document.getElementById ("rpasswordp").style.fontWeight = "bold";
         }
     }
 
@@ -78,9 +89,13 @@ window.onload = function(){
         if (age.value.search (/\d/) == -1) {
             document.getElementById ("agep").innerText = "Not a number";
             document.getElementById ("agep").style.visibility = "visible";
+            document.getElementById ("agep").style.color = "red";
+            document.getElementById ("agep").style.fontWeight = "bold";
         } else if ( age.value < 18 || age.value % 1 !== 0) {
             document.getElementById ("agep").innerText = "Age must be at least 18 and to be an integer";
             document.getElementById ("agep").style.visibility = "visible";
+            document.getElementById ("agep").style.color = "red";
+            document.getElementById ("agep").style.fontWeight = "bold";
         }
     }
 
@@ -91,18 +106,28 @@ window.onload = function(){
         if (telephone.value.search (/\d/) == -1 ) {
             document.getElementById ("telephonep").innerText = "Not a number";
             document.getElementById ("telephonep").style.visibility = "visible";
+            document.getElementById ("telephonep").style.color = "red";
+            document.getElementById ("telephonep").style.fontWeight = "bold";
         } else if (telephone.value.search (/\s/) !== -1) {
             document.getElementById ("telephonep").innerText = "There is a space";
             document.getElementById ("telephonep").style.visibility = "visible";
+            document.getElementById ("telephonep").style.color = "red";
+            document.getElementById ("telephonep").style.fontWeight = "bold";
         }   else if (telephone.value.search (/\(/) !== -1 || telephone.value.search (/\)/) !== -1 ) {
             document.getElementById ("telephonep").innerText = "There are parenthesis";
             document.getElementById ("telephonep").style.visibility = "visible";
+            document.getElementById ("telephonep").style.color = "red";
+            document.getElementById ("telephonep").style.fontWeight = "bold";
         }   else if (telephone.value.search (/\-/) !== -1) {
             document.getElementById ("telephonep").innerText = "There are dashs";
             document.getElementById ("telephonep").style.visibility = "visible";
+            document.getElementById ("telephonep").style.color = "red";
+            document.getElementById ("telephonep").style.fontWeight = "bold";
         } else if (telephone.value.length < 7) {
             document.getElementById ("telephonep").innerText = "Telephone number must have at least 7 numbers";
             document.getElementById ("telephonep").style.visibility = "visible";
+            document.getElementById ("telephonep").style.color = "red";
+            document.getElementById ("telephonep").style.fontWeight = "bold";
         }
     }
 
@@ -113,9 +138,13 @@ window.onload = function(){
         if ( adress.value.length < 5) {
             document.getElementById ("adressp").innerText = "Adress must have at least 5 characters";
             document.getElementById ("adressp").style.visibility = "visible";
+            document.getElementById ("adressp").style.color = "red";
+            document.getElementById ("adressp").style.fontWeight = "bold";
         }   else if (adress.value.search (/\w\s\d/) == -1) {
             document.getElementById ("adressp").innerText = "Adress must have characters, numbers and a space between";
             document.getElementById ("adressp").style.visibility = "visible";
+            document.getElementById ("adressp").style.color = "red";
+            document.getElementById ("adressp").style.fontWeight = "bold";
         }
     }
 
@@ -126,6 +155,8 @@ window.onload = function(){
         if (city.value.length < 3) {
             document.getElementById ("cityp").innerText = "City must have at least 3 characters";
             document.getElementById ("cityp").style.visibility = "visible";
+            document.getElementById ("cityp").style.color = "red";
+            document.getElementById ("cityp").style.fontWeight = "bold";
         }
     }
 
@@ -136,6 +167,8 @@ window.onload = function(){
         if ( postal.value.length < 3) {
             document.getElementById ("postalp").innerText = "Postal must have at least 3 numbers";
             document.getElementById ("postalp").style.visibility = "visible";
+            document.getElementById ("postalp").style.color = "red";
+            document.getElementById ("postalp").style.fontWeight = "bold";
         }
     }
 
@@ -146,18 +179,24 @@ window.onload = function(){
         if (identification.value.search (/\d/) == -1) {
             document.getElementById ("identificationp").innerText = "Identification must be a number";
             document.getElementById ("identificationp").style.visibility = "visible";
+            document.getElementById ("identificationp").style.color = "red";
+            document.getElementById ("identificationp").style.fontWeight = "bold";
         } else if (identification.value.length > 8 || identification.value.length < 7) {
             document.getElementById ("identificationp").innerText = "Identification must have between 7 and 8 numbers";
             document.getElementById ("identificationp").style.visibility = "visible";
+            document.getElementById ("identificationp").style.color = "red";
+            document.getElementById ("identificationp").style.fontWeight = "bold";
         }   else if (identification.value % 1 !== 0) {
             document.getElementById ("identificationp").innerText = "Identification must be an integer";
             document.getElementById ("identificationp").style.visibility = "visible";
+            document.getElementById ("identificationp").style.color = "red";
+            document.getElementById ("identificationp").style.fontWeight = "bold";
         }
     }
 
     function hideDiv () {
         document.getElementById ("fullnameoutput").style.visibility = "hidden";
-        document.getElementById( "emailoutput").style.visibility = "hidden";
+        document.getElementById( "emailp").style.visibility = "hidden";
         document.getElementById ("passwordp").style.visibility = "hidden";
         document.getElementById ("rpasswordp").style.visibility = "hidden";
         document.getElementById ("agep").style.visibility = "hidden";
@@ -172,7 +211,7 @@ window.onload = function(){
 
     function clickEvent (e) {
         e.preventDefault ();
-        
+
         alert("Check data: " + " Full name: " + fullname.value + " Email: "
         + email.value + " Password: " + password.value + " Age: " + age.value + " Telephone: " + telephone.value +
         " Adress: " + adress.value + " City: " + city.value + " Postal Code: " + postal.value +
