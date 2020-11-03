@@ -1,0 +1,81 @@
+.formbox {
+    margin-left: 100px;
+    margin-right: 100px;
+    min-width: 320px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    border: 1px solid;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.divform {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form label {
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+.divbutton {
+    width: 200px;
+    align-items: center;
+}
+
+.divbutton button:hover {
+    font-weight: bold;
+}
+
+.divbutton button {
+    background-color: #759fad;
+    width: 100px;
+}
+
+.divform div {
+    visibility: hidden;
+}
+
+.fullnamep {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+@media (min-width: 700px) {
+    .form {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .divform {
+        width: 45%;
+    }
+    .form input {
+        width: 75%;
+    }
+}
