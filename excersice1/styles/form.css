@@ -19,11 +19,18 @@
     border: 1px solid;
 }
 
-h2 {
+h1 {
     text-align: center;
     margin-top: 50px;
     font-size: 25px;
     font-weight: bold;
+}
+
+#user {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .divform {
@@ -62,7 +69,7 @@ h2 {
     visibility: hidden;
 }
 
-.fullnamep {
+#fullnamep {
     font-weight: bold;
     color: #ff0000;
 }
